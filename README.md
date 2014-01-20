@@ -38,6 +38,14 @@ php5 yiic.php migrate
 0 3 * * * php5 /var/www/social-links/protected/yiic.php DeleteWeekOldLogs
 ```
 
+- Test it by browsing to for example http://localhost/social-links (depends on your server configuration)
+- When everything is working fine change the application to production mode by commenting out line 7 and removing comments on line 8 in shared/config/bootstrap.php
+- run the following command:
+
+```
+./deploy.sh
+```
+
 ## Update
 - run the following commands:
 
