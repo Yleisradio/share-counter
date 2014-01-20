@@ -1,0 +1,86 @@
+.top-container {
+    margin-top: 75px;
+}
+
+.small-chart {
+    height: 125px;
+    position: relative;
+}
+
+.big-chart {
+    height: 300px;
+    position: relative;
+}
+
+.big-chart .progress, .small-chart .progress {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 20px; bottom: 0; right: 20px;
+}
+
+.metric {
+    text-align: center;
+    font-size: 40px;
+    color: #2f7ed8;
+    line-height: 70px;
+    white-space: nowrap;
+    height: 70px;
+}
+
+.metric-label {
+    text-align: center;
+    font-size: 15px;
+}
+
+.row {
+
+}
+
+.date-button {
+    margin: 0 3px 10px 3px;
+}
+
+#filter-form .control-group {
+    margin-right: 10px;
+}
+
+.left {
+    float: left;
+}
+.metric-label .icon-large {
+    margin-right: 10px;
+}
+
+body {
+    background: url('../../../images/noise.png');
+}
+
+.inline-metric {
+    text-align: center;
+}
+
+.inline-metric div {
+    display: inline;
+    margin: 0 20px;
+}
+
+#total-entry-external-referrer {
+    color: #0d233a;
+}
+
+#total-entry-search-engine {
+    color: #8bbc21;
+}
+
+.brand-image {
+    height: 24px;
+    width: 24px;
+}
+
+#feedback-row {
+   margin-top: 30px;
+}
+
+.table th {
+    font-size: 12px;
+}

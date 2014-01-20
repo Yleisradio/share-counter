@@ -1,0 +1,14 @@
+assets/*
+assets
+protected/runtime/*
+protected/runtime
+protected/tests/report/*
+protected/config/bootstrap.php
+protected/config/console.php
+protected/config/common.php
+protected/config/development.php
+protected/config/production.php
+protected/config/test.php
+nbproject/*
+!.gitkeep
+shared/*
