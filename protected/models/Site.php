@@ -189,13 +189,6 @@ class Site extends CActiveRecord {
         $trimmedUrl = strtolower($trimmedUrl);
         return $trimmedUrl;
     }
-
-    public function beforeSave() {
-        if (!$this->brand) {
-            $this->brand = $this->determineBrand();
-        }
-        return parent::beforeSave();
-    }
     
     public static function gridViewSettings() {
         return array(

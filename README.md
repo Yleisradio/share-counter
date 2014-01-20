@@ -1,4 +1,4 @@
-# Kato ite
+# Social Links
 Web Analytics tool that visualizes the number of social interactions that link to a website.
 Tracks Facebook, Twitter and LinkedIn actions.
 
@@ -10,24 +10,33 @@ Tracks Facebook, Twitter and LinkedIn actions.
 - Apache mod_rewrite plugin
 
 ## Installation
-- git clone ssh://git@tools.yle.fi:443/glob/kato-ite.git
-- cd kato-ite/protected
-- ./deploy.sh
-- Laita oikea yii-frameworkin polku static/config/bootstrap.php tiedostoon
-- Luo MySQL käyttäjätunnus ja tietokanta
-- Aja protected/data/schema.sql tietokantaan
-- Konffaa tietokannan tiedot static/config/console.php tiedostoon
-- Konffaa tietokannan tiedot static/config/development.php tiedostoon
-- Konffaa tietokannan tiedot static/config/production.php tiedostoon
-- ./deploy.sh
-- Lisää seuraavat kolme riviä crontabiin ja korjaa yiic.php polku oikein 
-- */5 * * * * php5 /var/www/kato-ite/protected/yiic.php update
-- */5 * * * * php5 /var/www/kato-ite/protected/yiic.php addsites
-- 0 3 * * * php5 /var/www/kato-ite/protected/yiic.php DeleteWeekOldLogs
+- git clone ssh://git@github.com/Yleisradio/social-links.git
+- run the following commands:
+```
+cd social-links/protected
+chmod o+x deploy.sh
+./deploy.sh
+```
+- Modify the yii framework path in shared/config/bootstrap.php line 10
+- Create MySQL priviledges and a database
+- Add the database connection information to shared/config/commond.php lines 37-41
+- run the following command:
+```
+./deploy.sh
+```
+- Add the next three rows to crontab (correct the paths if necessary)
+```
+*/5 * * * * php5 /var/www/social-links/protected/yiic.php update
+*/5 * * * * php5 /var/www/social-links/protected/yiic.php addsites
+0 3 * * * php5 /var/www/social-links/protected/yiic.php DeleteWeekOldLogs
+```
 
-## Päivitys
-- git reset --hard
-- git pull ssh://git@tools.yle.fi:443/glob/kato-ite.git
-- cd kato-ite/protected
-- ./deploy.sh
+## Update
+- run the following commands:
+```
+git reset --hard
+git pull ssh://git@github.com/Yleisradio/social-links.git
+cd social-links/protected
+./deploy.sh
+```
 

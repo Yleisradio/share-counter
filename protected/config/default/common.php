@@ -43,7 +43,7 @@ return array(
         //Cache to be used. See subclasses for options: http://www.yiiframework.com/doc/api/1.1/CCache 
         //CDummyCache can be used to disable caching
         'cache' => array(
-            'class' => 'CApcCache',
+            'class' => 'CDummyCache',
         ),
 //        'user' => array(
 //            'loginUrl' => array('authentication/login', 'redirect' => $_SERVER['REQUEST_URI']),
