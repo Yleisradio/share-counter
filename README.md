@@ -11,6 +11,8 @@ Tracks Facebook, Twitter and LinkedIn actions.
 
 ## Installation
 - git clone ssh://git@github.com/Yleisradio/social-links.git
+- Download Highcharts from http://www.highcharts.com/download and place highcharts.js and highcharts-more.js to js/highcharts
+- Make sure you already have a proper Highcharts license or acquire a new from http://shop.highsoft.com/highcharts.html
 - run the following commands:
 
 ```
