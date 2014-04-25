@@ -1,4 +1,4 @@
-# Social Links
+# Share Counter
 Web Analytics tool that visualizes the number of social interactions that link to a website.
 Tracks Facebook, Twitter and LinkedIn actions.
 
@@ -10,13 +10,13 @@ Tracks Facebook, Twitter and LinkedIn actions.
 - Apache mod_rewrite plugin
 
 ## Installation
-- git clone ssh://git@github.com/Yleisradio/social-links.git
+- git clone ssh://git@github.com/Yleisradio/share-counter.git
 - Download Highcharts from http://www.highcharts.com/download and place highcharts.js and highcharts-more.js to js/highcharts
 - Make sure you already have a proper Highcharts license or acquire a new from http://shop.highsoft.com/highcharts.html
 - run the following commands:
 
 ```
-cd social-links/protected
+cd share-counter/protected
 chmod o+x deploy.sh
 ./deploy.sh
 ```
@@ -35,12 +35,12 @@ php5 yiic.php migrate
 - Add the next three rows to crontab (correct the paths if necessary)
 
 ```
-*/5 * * * * php5 /var/www/social-links/protected/yiic.php update
-*/5 * * * * php5 /var/www/social-links/protected/yiic.php addsites
-0 3 * * * php5 /var/www/social-links/protected/yiic.php DeleteWeekOldLogs
+*/5 * * * * php5 /var/www/share-counter/protected/yiic.php update
+*/5 * * * * php5 /var/www/share-counter/protected/yiic.php addsites
+0 3 * * * php5 /var/www/share-counter/protected/yiic.php DeleteWeekOldLogs
 ```
 
-- Test it by browsing to for example http://localhost/social-links (depends on your server configuration)
+- Test it by browsing to for example http://localhost/share-counter (depends on your server configuration)
 - When everything is working fine change the application to production mode by commenting out line 7 and removing comments on line 8 in shared/config/bootstrap.php
 - run the following command:
 
@@ -53,7 +53,7 @@ php5 yiic.php migrate
 
 ```
 git reset --hard
-git pull ssh://git@github.com/Yleisradio/social-links.git
-cd social-links/protected
+git pull ssh://git@github.com/Yleisradio/share-counter.git
+cd share-counter/protected
 ./deploy.sh
 ```
